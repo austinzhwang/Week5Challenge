@@ -9,6 +9,7 @@ html, body {
 }
 
 #mainNav {
+    position: absolute;
     background: white;
 }
 
@@ -77,7 +78,18 @@ footer .copyright {
 }
 
 footer {
-    height: 100px;
+    padding: 50px 0 65px;
+}
+
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.form-resize {
+    width: 60%;
+    margin: auto;
 }
 
 @media only screen and (min-width: 992px) {

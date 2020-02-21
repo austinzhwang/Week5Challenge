@@ -33,7 +33,6 @@ public class Job {
     private String author;
 
     @NotNull
-    @Length(min=1)
     private long phone;
 
     public Job() {
@@ -41,7 +40,7 @@ public class Job {
     }
 
     public Job(@NotEmpty String title, @NotEmpty String description, @NotEmpty String postedDate,
-               @NotEmpty String author, @Length(min = 1) long phone) {
+               @NotEmpty String author, long phone) {
         this.title = title;
         this.description = description;
         this.postedDate = postedDate;
