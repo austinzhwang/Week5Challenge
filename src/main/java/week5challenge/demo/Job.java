@@ -1,6 +1,7 @@
 package week5challenge.demo;
 
 import com.sun.istack.NotNull;
+import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -22,6 +23,7 @@ public class Job {
 
     @NotNull
     @NotEmpty
+    @Type(type="text")
     private String description;
 
     @NotNull

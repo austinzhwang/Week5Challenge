@@ -13,15 +13,7 @@ html, body {
     background: white;
 }
 
-.navbar-brand {
-    padding-left: 11px;
-    padding-right: 11px;
-    border: 2px solid #000;
-    border-radius: 50%;
-}
-
 header.masthead {
-
     background: no-repeat center center;
     background-color: #868e96;
     background-attachment: scroll;
@@ -94,13 +86,13 @@ footer .copyright {
 
 @media only screen and (min-width: 992px) {
     .title {
-        height: 95vh;
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     header.masthead {
-        height: 95vh;
+        height: 100vh;
     }
 }
