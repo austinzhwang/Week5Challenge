@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>JobsList | Job Listing</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/a6ae2d75db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav th:replace="base :: navlinks"></nav>
+    <header class="masthead"  style="background-image: url('img/job-bg.jpg')">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="title col-lg-8 col-md-10 mx-auto">
+                    <div class="site-heading">
+                        <h1>JOB</h1>
+                        <span class="subheading">Information below</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="jumbotron">
+        Title: <span th:text="${job.title}"></span><br />
+        Description: <span th:text="${job.description}"></span><br />
+        Date Posted: <span th:text="${job.postedDate}"></span><br />
+        Posted By: <span th:text="${job.author}"></span><br />
+        Phone #: <span th:text="${job.phone}"></span><br />
+        <a th:href="@{/update/{id}(id=${job.id})}">EDIT</a>
+        <a th:href="@{/delete/{id}(id=${job.id})}">DELETE</a><br />
+        <a href="/">Back to All Job Listings</a><br />
+    </div>
+    <footer th:replace="base :: footer"></footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
